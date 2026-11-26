@@ -1,10 +1,7 @@
-import Navbar from './Navbar'
-import Footer from './Footer'
 
 function AnnounceResult() {
     return (
         <div>
-            <Navbar />
             <div className='w-[80%] md:w-[40%] lg:w-[40%] mx-auto mt-20 bg-white px-5 text-center py-7 rounded-2xl border-2'>
                 <div className='border-b-2'>
                     <h1 className='text-center font-bold text-2xl mb-2 py-2'>STUDENT RESULT REPORT</h1>
@@ -20,12 +17,6 @@ function AnnounceResult() {
                 </div>
             </div>
 
-
-
-
-
-
-            <Footer/>
         </div>
     )
 }

@@ -1,4 +1,5 @@
-import { BrowserRouter,Route,Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Layouts from './layouts/Layouts'
 import './App.css'
 import Home from './pages/Home'
 import AnnounceResult from './components/AnnounceResult'
@@ -10,8 +11,10 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-            <Route path='/' element={<Home/>} />
-            <Route path='/result' element={<AnnounceResult/>} />
+          <Route element={<Layouts />}>
+            <Route path='/' element={<Home />} />
+            <Route path='/result' element={<AnnounceResult />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

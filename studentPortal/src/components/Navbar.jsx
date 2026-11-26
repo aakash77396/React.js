@@ -1,8 +1,8 @@
 
 function Navbar() {
     return (
-        <div>
-            <div className="bg-blue-950 text-white  justify-center items-center  flex md:justify-between lg:justify-between px-6px md:px-20 lg:px-20 w-full flex-col md:flex-row lg:flex-row">
+        <div className="relative mb-[13rem] md:mb-[10rem] lg:mb-[10rem]">
+            <div className="bg-blue-950 text-white fixed top-0  justify-center items-center  flex md:justify-between lg:justify-between px-6px md:px-20 lg:px-20 w-full flex-col md:flex-row lg:flex-row">
                 <div className="flex items-center p-4">
                     <div><span  className="bi bi-mortarboard-fill inline-block mr-2 text-4xl text-blue-400"></span></div>
                     <div className="flex flex-col">

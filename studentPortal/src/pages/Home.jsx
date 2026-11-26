@@ -1,10 +1,7 @@
-import { useEffect, useRef } from 'react';
-import Navbar from '../components/Navbar'
 import MainPage from './MainPage'
-import Footer from '../components/Footer';
 
 function Home() {
-  const input = useRef(false);
+  /*const input = useRef(false);
 
   useEffect(() => {
     if (!input.current) {
@@ -12,14 +9,13 @@ function Home() {
       input.current = true;
     }
   }, []);
+  */
 
 
 
   return (
     <div>
-      <Navbar />
       <MainPage />
-      <Footer />
     </div>
   )
 }
