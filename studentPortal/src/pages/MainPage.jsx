@@ -1,7 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useAuth } from '../context/Authcontext'
+import { useNavigate } from 'react-router-dom'
 
 function MainPage() {
+    const { user } = useAuth();
+    const navigate = useNavigate();
+
     return (
         <div className='w-[85%] md:w-[70%] lg:w-[70%] mx-auto mt-5'>
             <div>
@@ -38,12 +43,11 @@ function MainPage() {
                     </div>
                 </div>
 
-                <Link to="/result">
-                    <div className='w-[90%] rounded flex justify-center items-center mx-auto bg-green-800 hover:bg-green-900 transition-all  mb-2 p-3 text-[13px] text-white font-bold cursor-pointer'>
-                        <h1>ANNOUNCE RESULT</h1>
-                        <span className='bi bi-arrow-up-right inline-block ml-3 text-[15px]'></span>
-                    </div>
-                </Link>
+
+                <div onClick={()=>navigate(user ? "/result" : "/auth")} className='w-[90%] rounded flex justify-center items-center mx-auto bg-green-800 hover:bg-green-900 transition-all  mb-2 p-3 text-[13px] text-white font-bold cursor-pointer'>
+                    <h1>ANNOUNCE RESULT</h1>
+                    <span className='bi bi-arrow-up-right inline-block ml-3 text-[15px]'></span>
+                </div>
 
                 <div className='text-[12px] text-center mb-4'>
                     <p>Please confirm before viewing your result.</p>

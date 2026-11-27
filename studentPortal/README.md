@@ -1,41 +1,53 @@
-
 # Student Result Portal
 
-A responsive Student Result Portal built using React.js and Tailwind CSS. The application displays student academic information and provides a result announcement page through React Router.
+A responsive **Student Result Portal** built using React.js,Bootstrap, Bootstrap-iocns and Tailwind CSS. The application provides a student-friendly interface to view academic information and navigate to the result announcement page.
+
+This project focuses on component-based development, client-side routing, reusable layouts, and responsive UI design.
 
 ## Features
 
 - Responsive navigation bar
 - Student academic information display
-- Result announcement button
+- Result announcement functionality
 - Student result report page
 - React Router navigation between pages
-- Responsive layout for mobile, tablet, and desktop
+- Shared layouts with reusable components
+- Authentication context using React Context API
+- Custom 404 Not Found page
+- Responsive design for mobile, tablet, and desktop
 - Tailwind CSS styling
 - Bootstrap Icons integration
 - Hover effects and smooth transitions
 
 ## Tech Stack
 
-- React.js
-- JavaScript
-- Tailwind CSS
-- React Router DOM
-- Bootstrap Icons
-- Vite
+- **Frontend:** React.js
+- **Language:** JavaScript
+- **Styling:** Tailwind CSS
+- **Routing:** React Router DOM
+- **State Management:** React Context API
+- **Icons:** Bootstrap Icons
+- **Build Tool:** Vite
+- **Version Control:** Git & GitHub
 
 ## Project Structure
 
 ```text
-student-result-portal/
+student-portal/
 ├── public/
 ├── src/
 │   ├── components/
 │   │   ├── Navbar.jsx
-│   │   ├── Footer.jsx
-│   │   └── AnnounceResult.jsx
+│   │   └── Footer.jsx
+│   ├── context/
+│   │   └── Authcontext.jsx
+│   ├── layouts/
+│   │   └── Layouts.jsx
 │   ├── pages/
-│   │   └── Home.jsx
+│   │   ├── Home.jsx
+│   │   ├── AnnounceResult.jsx
+│   │   ├── Auth.jsx
+│   │   └── NotFound.jsx
 │   ├── App.jsx
 │   ├── App.css
 │   └── main.jsx
@@ -48,48 +60,58 @@ student-result-portal/
 
 ### 1. Home Page
 
-- Displays student academic details.
-- Shows course, examination, and institute information.
+- Displays student academic information.
+- Shows course, examination, and institute details.
 - Provides an Announce Result button.
-- Includes student access and result report information.
+- Includes student access and result-related information.
 
-### 2. Result Report Page
+### 2. Result Announcement Page
 
-- Displays the student result.
+- Displays the student result report.
 - Shows academic year and examination details.
-- Displays the result status.
-- Provides a congratulatory message.
+- Displays result status and related information.
+
+### 3. Authentication Page
+
+- Provides the authentication interface.
+- Uses React Context API for shared authentication state.
+
+### 4. Not Found Page
+
+- Displays a custom 404 page for invalid routes.
 
 ## Routing
 
-The application uses React Router DOM for navigation.
+The application uses React Router DOM for client-side navigation.
 
 | Route | Page |
 |---|---|
 | `/` | Home Page |
-| `/result` | Result Report Page |
+| `/result` | Result Announcement Page |
+| `/auth` | Authentication Page |
+| `*` | Not Found Page |
 
 ## Installation and Setup
 
-### Step 1: Clone the Repository
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/aakash77396/React.js.git
+git clone https://github.com/aakash77396/student-portal.git
 ```
 
-### Step 2: Navigate to the Project
+### 2. Navigate to the Project
 
 ```bash
-cd student-result-portal
+cd student-portal
 ```
 
-### Step 3: Install Dependencies
+### 3. Install Dependencies
 
 ```bash
 npm install
 ```
 
-### Step 4: Start the Development Server
+### 4. Start the Development Server
 
 ```bash
 npm run dev
@@ -97,32 +119,33 @@ npm run dev
 
 Open the local URL displayed in your terminal.
 
-## React Router Setup
+## Learning Objectives
 
-```jsx
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+Through this project, I practiced:
 
-<BrowserRouter>
-  <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/result" element={<AnnounceResult />} />
-  </Routes>
-</BrowserRouter>
-```
+- Building reusable React components
+- Implementing client-side routing
+- Creating shared layouts
+- Managing shared state using React Context API
+- Organizing a React project using a structured folder architecture
+- Designing responsive interfaces with Tailwind CSS
+- Using Git and GitHub for version control
 
 ## Future Improvements
 
-- Student login and authentication
+- Secure student authentication
 - Search results using roll number
 - Dynamic result data from an API
 - Backend integration using Java Spring Boot
 - Database integration using MySQL or Oracle
-- Download result report as PDF
+- Download result reports as PDF
 - Admin dashboard for result management
 
 ## Author
 
-Aakash Kumar
+**Aakash Kumar**
+
+GitHub: [@aakash77396](https://github.com/aakash77396)
 
 ## License
 
